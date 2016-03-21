@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Cuddle - Search</title>
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- main styles -->
+    <link href="css/common.css" rel="stylesheet" media="screen">
+    <!--<link href="css/desktop.css" rel="stylesheet" media="screen">-->
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="clearfix">
+          <div class="pull-left">
+            <a class="pln prn logo" href="/"><i class="icon-menu visible-sm-inline visible-xs-inline"></i><img src="img/logo.png" alt="cuddle"/></a>
+          </div>
+          <div class="clearfix menu">
+            <a href="#"><i class="icon-activity-check"></i><span class="hidden-xs hidden-sm">Bookings</span></a>
+            <a href="#"><i class="icon-magnifier"></i><span class="hidden-xs hidden-sm">Browse</span></a>
+            <a href="#"><i class="icon-chat"><span>22</span></i><span class="hidden-xs hidden-sm">Chat</span></a>
+            <div class="dropdown dropdown-filter">
+              <a href="#"><i class="icon-alert"><span>!</span></i><span class="hidden-xs hidden-sm">Alerts</span></a>
+              <div class="dropdown-menu">
+                <div class="top clearfix">
+                  <div class="pull-left">
+                    <i class="icon-alert"></i>Alerts
+                  </div>
+                  <a href="#" class="close-btn pull-right"><i class="icon-times"></i></a>
+                </div>
+                <a href="#" class="item clearfix">
+                  <div class="avatar">
+                    <img src="img/avatar.jpg" alt=""/>
+                  </div>
+                  <div class="info">
+                    <div class="name"><span>John</span> <i class="icon-activity-check"></i> Feb 26</div>
+                    <div>Accepted your <span>offer</span></div>
+                  </div>
+                </a>
+                <a href="#" class="item clearfix">
+                  <div class="avatar">
+                    <img src="img/avatar.jpg" alt=""/>
+                  </div>
+                  <div class="info">
+                    <div class="name"><span>John</span> <i class="icon-activity-check"></i> Feb 26</div>
+                    <div>Accepted your <span>offer</span></div>
+                  </div>
+                </a>
+                <a href="#" class="item clearfix">
+                  <div class="avatar">
+                    <img src="img/avatar.jpg" alt=""/>
+                  </div>
+                  <div class="info">
+                    <div class="name"><span>John</span> <i class="icon-activity-check"></i> Feb 26</div>
+                    <div>Accepted your <span>offer</span></div>
+                  </div>
+                </a>
+                <a href="#" class="item clearfix">
+                  <div class="avatar">
+                    <img src="img/avatar.jpg" alt=""/>
+                  </div>
+                  <div class="info">
+                    <div class="name"><span>John</span> <i class="icon-activity-check"></i> Feb 26</div>
+                    <div>Accepted your <span>offer</span></div>
+                  </div>
+                </a>
+                <a href="#" class="bottom">
+                  <i class="icon-show"></i>Older Alerts
+                </a>
+              </div>
+            </div>
+            <!--<a href="#"><i class="icon-ellipsis"></i><span class="hidden-xs hidden-sm">More</span></a>-->
+            <div class="dropdown dropdown-filter">
+              <a href="#" class="avatar"><img src="img/avatar.png" alt=""/></a>
+              <div class="dropdown-menu">
+                <div class="top clearfix">
+                  <div class="pull-left">
+                    Menu
+                  </div>
+                  <a href="#" class="close-btn pull-right"><i class="icon-times"></i></a>
+                </div>
+                <a href="#" class="item">
+                  <i class="icon-user"></i>My Profile
+                </a> 
+                <a href="#" class="item">
+                  <i class="icon-user"></i>Edit Profile
+                </a> 
+                <a href="#" class="item">
+                  <i class="icon-user"></i>Account Settings
+                </a> 
+                <a href="#" class="item">
+                  <i class="icon-user"></i>Get Verified
+                </a> 
+                <a href="#" class="item">
+                  <i class="icon-user"></i>Blog
+                </a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="search">
+        <div class="search-bar clearfix">
+            <div class="col-sm-5 search-menu">
+              <div class="dropdown-filter" id="location-dropdown">
+                <a data-info="Select Location">
+                  <span id="location-text">Your Location</span>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="clearfix city-row">
+                    <div class="pull-left">Select City</div>
+                    <a href="#" class="pull-right close-btn"><i class="icon-times"></i></a>
+                  </div>
+                  <div class="field-row">
+                    <input type="text" class="form-control" placeholder="Enter the location" id="location" autocomplete="off">
+                    <i class="ico ico-clear-field" id="clear-location"></i>
+                    <input type="hidden" name="locationLat" id="locationLat" value="49.2827291">
+                    <input type="hidden" name="locationLon" id="locationLon" value="-123.1207375">
+                    <a href="#" id="map-gps-button"><i class="icon-bullseye"></i></a>
+                  </div>
+                  <div class="distance-row">
+                    <div id="range">Within <span>500</span>km</div>
+                    <input type="text" class="slider" id="slider-range" value="200" data-slider-min="10" data-slider-handle="triangle" data-slider-max="500" data-slider-step="10" data-slider-value="200" data-slider-tooltip="hide"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 search-menu">
+              <div class="dropdown-filter" id="activities-dropdown">
+                <a data-info="Select Location">
+                  <span id="activities-text"><i class="icon-coffee"></i><i class="icon-beach"></i><i class="icon-picknick"></i></span>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="first-row">
+                    <div class="row">
+                      <div class="col-sm-9 text-center">Select Activities</div>
+                      <div class="col-sm-3 text-right">
+                        <a href="#" class="btn btn-success btn-sm"><i class="icon-check"></i>Save</a>
+                        <a href="#" class="close-btn"><i class="icon-times"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="options">
+                    <div class="row">
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-all"></i><br/>Select All
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item active">
+                          <i class="icon-beach"></i><br/>Beach
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-bike"></i><br/>Bike Ride
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-coffee"></i><br/>Coffee
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-cuddling"></i><br/>Cuddling
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-wine"></i><br/>Drinks
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-dinner"></i><br/>Eat Out
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-compass"></i><br/>Explore
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-listening"></i><br/>Listen
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-shopping"></i><br/>Mall
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-ticket"></i><br/>Movies
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-museum"></i><br/>Museum
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-camping"></i><br/>Outdoor
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-picknick"></i><br/>Picnic
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-running"></i><br/>Run
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a href="#" class="item">
+                          <i class="icon-traveling"></i><br/>Vacation
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 search-menu">
+              <div class="dropdown-filter" id="filters-dropdown">
+                <a><i class="icon-filter"></i>More Filters</a>
+                <div class="dropdown-menu">
+                  <div class="row">
+                    <div class="col-sm-9 br prn">
+                      <div class="clearfix item">
+                        <div class="col-xs-4 name">Rate</div>
+                        <div class="col-xs-8 rate">
+                          <div data-toggle="buttons" class="btn-group btn-block" id="filter-rate">
+                            <label class="btn btn-default btn-sm" input_value="2">
+                              <span>$</span>$$$
+                              <input type="radio">
+                            </label>
+                            <label class="btn btn-default btn-sm" input_value="3">
+                              <span>$$</span>$$
+                              <input type="radio">
+                            </label>
+                            <label class="btn btn-default btn-sm" input_value="4">
+                              <span>$$$</span>$
+                              <input type="radio">
+                            </label>
+                            <label class="btn btn-default btn-sm" input_value="5">
+                              <span>$$$$</span>
+                              <input type="radio">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix item" id="menu-age">
+                        <div class="col-xs-4 name">Age</div>
+                        <div class="col-xs-8">
+                          <div class="row slide-range">
+                            <div class="col-xs-2 mt15 prn">
+                              <input type="text" class="min form-control form-control-sm" id="age_from" name="age_from" value="18">
+                            </div>
+                            <div class="col-xs-8">
+                              <input type="text" class="slider" id="slider-age" value="" data-slider-min="18" data-slider-step="1" data-slider-max="70" data-slider-value="[18,70]" data-slider-tooltip="hide"/>
+                            </div>
+                            <div class="col-xs-2 mt15 pln">
+                              <input type="text" class="max form-control form-control-sm" id="age_to" name="age_to" value="70">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix item">
+                        <div class="col-xs-4 name">Gender</div>
+                        <div class="col-xs-8">
+                          <div data-toggle="buttons" class="btn-group btn-block" id="filter-sex">
+                            <label class="btn btn-default col-xs-4" input_value="Male">Male
+                              <input type="radio">
+                            </label>
+                            <label class="btn btn-default btn-tall col-xs-4 active" input_value="Female">Female
+                              <input type="radio">
+                            </label>
+                            <label class="btn btn-default btn-tall col-xs-4" input_value="">Any
+                              <input type="radio">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix item">
+                        <div class="col-xs-4 name">Must have Pictures</div>
+                        <div class="col-xs-8">
+                          <div data-toggle="buttons" class="btn-group btn-block" id="filter-pictures">
+                            <label class="btn btn-default col-xs-6" input_value="1">Yes
+                              <input type="radio" name="contact_form" checked="checked" value="1">
+                            </label>
+                            <label class="btn btn-default col-xs-6 active" input_value="">No
+                              <input type="radio" name="contact_form" value="">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix item">
+                        <div class="col-xs-4 name">Must be Online</div>
+                        <div class="col-xs-8">
+                          <div data-toggle="buttons" class="btn-group btn-block" id="filter-online">
+                            <label class="btn btn-default col-xs-6 " input_value="1">Yes
+                              <input type="radio" name="contact_form" checked="checked" value="1">
+                            </label>
+                            <label class="btn btn-default col-xs-6 active" input_value="">No
+                              <input type="radio" name="contact_form" value="">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <a href="#" class="btn btn-success mr20" id="filters-desktop">Show Profiles</a>
+                        <a href="#" class="btn btn-default filters-reset">Reset Filters</a>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="filter-ethnicity">
+                        <h4>Ethnicity</h4>
+                        <ul id="filter-ethnicity">
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="" id="ethnicity0" checked="" input_value="">
+                            <label for="ethnicity0" class="css-label" input_value="">All Ethnicities</label>
+                          </li>
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="1" id="ethnicity1" input_value="1">
+                            <label for="ethnicity1" class="css-label" input_value="1">Asian</label>
+                          </li>
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="2" id="ethnicity2" input_value="2">
+                            <label for="ethnicity2" class="css-label" input_value="2">Black</label>
+                          </li>
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="4" id="ethnicity4" input_value="4">
+                            <label for="ethnicity4" class="css-label" input_value="4">Indian</label>
+                          </li>
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="5" id="ethnicity5" input_value="5">
+                            <label for="ethnicity5" class="css-label" input_value="5">Hispanic</label>
+                          </li>
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="6" id="ethnicity6" input_value="6">
+                            <label for="ethnicity6" class="css-label" input_value="6">Middle Eastern</label>
+                          </li>
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="7" id="ethnicity7" input_value="7">
+                            <label for="ethnicity7" class="css-label" input_value="7">Mixed Race</label>
+                          </li>
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="8" id="ethnicity8" input_value="8">
+                            <label for="ethnicity8" class="css-label" input_value="8">Native American</label>
+                          </li>
+                          <li>
+                            <input class="css-checkbox" type="checkbox" name="ethnicity" value="9" id="ethnicity9" input_value="9">
+                            <label for="ethnicity9" class="css-label" input_value="9">White / Caucasian</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!--        <div class="col-xs-2 filter-bar pln">
+                  <div data-toggle="buttons" class="btn-group btn-block mt" id="mode-select">
+                    <label class="btn btn-default col-xs-6" id="list" input_value="list"><i class="ico ico-list2"></i> List
+                      <input type="radio">
+                    </label>
+                    <label class="btn btn-default col-xs-6 active" id="grid" input_value="grid"><i class="ico ico-grid"></i> Grid
+                      <input type="radio">
+                    </label>
+                  </div>
+                </div>-->
+
+        <div class="results">
+          <div class="filters">
+            <a href="#" class="btn btn-default btn-xs">Online now <i class="icon-times"></i></a>
+            <a href="#" class="btn btn-default btn-xs">Athletic <i class="icon-times"></i></a>
+            <a href="#" class="btn btn-default btn-xs">21-36 <i class="icon-times"></i></a>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <a href="#" class="item">
+                <div class="img" style="background-image: url(img/girl1.jpg);">
+                  <div class="verified"></div>
+                  <div class="online"></div>
+                  <div class="favorite"></div>
+                  <div class="rating">
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="name">
+                    <span>Jane</span>
+                    <span>27</span>
+                    <span>Black</span>
+                  </div>
+                  <div class="city">Metro Vancouver</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#" class="item">
+                <div class="img" style="background-image: url(img/girl1.jpg);">
+                  <div class="favorite"></div>
+                  <div class="rating">
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="name">
+                    <span>Jane</span>
+                    <span>27</span>
+                    <span>Black</span>
+                  </div>
+                  <div class="city">Metro Vancouver</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#" class="item">
+                <div class="img" style="background-image: url(img/girl1.jpg);">
+                  <div class="favorite"></div>
+                  <div class="rating">
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="name">
+                    <span>Jane</span>
+                    <span>27</span>
+                    <span>Black</span>
+                  </div>
+                  <div class="city">Metro Vancouver</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#" class="item">
+                <div class="img" style="background-image: url(img/girl1.jpg);">
+                  <div class="favorite"></div>
+                  <div class="rating">
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="name">
+                    <span>Jane</span>
+                    <span>27</span>
+                    <span>Black</span>
+                  </div>
+                  <div class="city">Metro Vancouver</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#" class="item">
+                <div class="img" style="background-image: url(img/girl1.jpg);">
+                  <div class="favorite"></div>
+                  <div class="rating">
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="name">
+                    <span>Jane</span>
+                    <span>27</span>
+                    <span>Black</span>
+                  </div>
+                  <div class="city">Metro Vancouver</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#" class="item">
+                <div class="img" style="background-image: url(img/girl1.jpg);">
+                  <div class="favorite"></div>
+                  <div class="rating">
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star active"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="name">
+                    <span>Jane</span>
+                    <span>27</span>
+                    <span>Black</span>
+                  </div>
+                  <div class="city">Metro Vancouver</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="row">
+            <div class="col-sm-3">
+              <a href="#" class="btn btn-default btn-block">Prev</a>
+            </div>
+            <div class="col-sm-6 pages">
+              <a href="#" class="btn btn-default active">1</a>
+              <a href="#" class="btn btn-default">2</a>
+              <a href="#" class="btn btn-default">3</a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#" class="btn btn-success btn-block">Next</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="social">
+          <a href="#"><i class="icon-twitter"></i></a>
+          <a href="#"><i class="icon-facebook"></i></a>
+          <a href="#"><i class="icon-instagram"></i></a>
+        </div>
+        <ul class="links">
+          <li><a href="#">Privacy</a></li>
+          <li> / <a href="#">Refund Policy</a></li>
+          <li> / <a href="#">Terms & Conditions</a></li>
+          <li> / <a href="#">Contact</a></li>
+          <li> / <a href="#">Billing Inquiry</a></li>
+          <li> / <a href="#" class="white"><i class="icon-mobile"></i>Mobile Site</a></li>
+        </ul>
+        <div>©2014-2016 Cuddleup.com</div>
+      </div>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/list.js"></script>
+    <!--<script src="js/libs/bootstrap-slider.js"></script>-->
+    <script src="js/common.js"></script>
+  </body>
+</html>
