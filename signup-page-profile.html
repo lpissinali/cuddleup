@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Cuddle - Sign In</title>
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- main styles -->
+    <link href="css/common.css" rel="stylesheet" media="screen">
+    <!--<link href="css/desktop.css" rel="stylesheet" media="screen">-->
+  </head>
+
+  <body>
+    <div class="signup-steps">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 col-xs-offset-0">
+            <div class="row">
+              <div class="col-md-3 col-xs-4">
+                <a href="#" class="btn btn-block btn-default"><i class="icon-arrow-left"></i> BACK</a>
+              </div>
+              <div class="col-md-6 col-xs-4 steps">
+                <div class="item checked"></div>
+                <div class="item active"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <a href="#" class="btn btn-block btn-default">NEXT <i class="icon-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-profile">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 col-xs-offset-0">
+            <form class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="firstName">First Name</label>
+                <div class="input-group">
+                  <div class="input-group-addon">First Name</div>
+                  <input type="text" class="form-control" id="firstName" placeholder="What other users will see">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="email">Email</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Email</div>
+                  <input type="email" class="form-control" id="email" placeholder="You'll get timely notifications here">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="password">Password</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Password</div>
+                  <input type="password" class="form-control" id="password" placeholder="Minimum of 6 characters">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="birthday">Birthday</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Birthday</div>
+                  <input type="text" class="form-control brn" id="birthday" placeholder="To verify your age">
+                  <div class="input-group-addon"><i class="icon-gift"></i></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="ethnicity">Ethnicity</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Ethnicity</div>
+                  <dt id="select-ethnicity-label">&nbsp;</dt>
+                  <dd id="select-ethnicity-element">
+                    <div class="dropdown">
+                      <a data-toggle="dropdown" class="form-control">
+                        <span id="selected_select-ethnicity">Asian</span></a>
+
+                      <ul class="dropdown-menu" id="select-ethnicity">
+                        <li select_value="1"><a>Asian</a></li>
+                        <li select_value="2"><a>Black</a></li>
+                        <li select_value="4"><a>Indian</a></li>
+                        <li select_value="5"><a>Hispanic</a></li>
+                        <li select_value="6"><a>Middle Eastern</a></li>
+                        <li select_value="7"><a>Mixed Race</a></li>
+                        <li select_value="8"><a>Native American</a></li>
+                        <li select_value="9"><a>White / Caucasian</a></li>
+                      </ul>
+                      <input type="hidden" name="ethnicity" id="input-select-ethnicity" value="1">
+                    </div>
+                  </dd>  
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="gender">Gender</label>
+                <div class="input-group">
+                  <div class="input-group-addon">Gender</div>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default btn-lg active">
+                      <input type="radio" name="gender" id="option1" autocomplete="off" checked> <i class="icon-venus"></i><span class="hidden-xxs"> Female</span>
+                    </label>
+                    <label class="btn btn-default btn-lg">
+                      <input type="radio" name="gender" id="option2" autocomplete="off"> <i class="icon-mars"></i><span class="hidden-xxs"> Male</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="social">
+          <a href="#"><i class="icon-twitter"></i></a>
+          <a href="#"><i class="icon-facebook"></i></a>
+          <a href="#"><i class="icon-instagram"></i></a>
+        </div>
+        <ul class="links">
+          <li><a href="#">Privacy</a></li>
+          <li> / <a href="#">Refund Policy</a></li>
+          <li> / <a href="#">Terms & Conditions</a></li>
+          <li> / <a href="#">Contact</a></li>
+          <li> / <a href="#">Billing Inquiry</a></li>
+          <li> / <a href="#" class="white"><i class="icon-mobile"></i>Mobile Site</a></li>
+        </ul>
+        <div>©2014-2016 Cuddleup.com</div>
+      </div>
+    </footer>
+
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/list.js"></script>
+    <!--<script src="js/libs/bootstrap-slider.js"></script>-->
+    <script src="js/common.js"></script>
+  </body>
+</html>
