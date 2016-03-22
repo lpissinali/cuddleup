@@ -23,7 +23,8 @@
             </div>
             <div class="col-xs-6 menu">
               <a href="#"><i class="icon-blog"></i><span class="hidden-xs hidden-sm">Blog</span></a>
-              <a href="#"><i class="icon-key"></i><span class="hidden-xs hidden-sm">Login</span></a>
+              <a href="#" data-toggle="modal" data-target="#login"><i class="icon-key"></i><span class="hidden-xs hidden-sm">Login</span></a>
+              <a href="#" data-toggle="modal" data-target="#register"><i class="icon-key"></i><span class="hidden-xs hidden-sm">Register</span></a>
             </div>
           </div>
           <h1>The <strong>Fun</strong> way to Meet a Companion to Spend the Day with</h1>
@@ -183,7 +184,7 @@
         </div>
       </section>
     </div>
-    
+
     <footer>
       <div class="container">
         <div class="social">
@@ -202,6 +203,81 @@
         <div>©2014-2016 Cuddleup.com</div>
       </div>
     </footer>
+
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-times"></i></button>
+            <div class="modal-title"><i class="icon-activity-check"></i></div>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm" enctype="application/x-www-form-urlencoded" action="/user/login" method="post">
+              <div><input type="email" name="email" id="email" value="" placeholder="EMAIL" class="form-control input-lg" tabindex="1"></div>
+              <div><input type="password" name="password" id="password" value="PASSWORD" class="form-control input-lg" tabindex="2"></div>
+              <div class="clearfix">
+                <div class="pull-left">
+                  Remember me
+                </div>
+                <div class="pull-right">
+                  <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#forgot">Forgot Password?</a>
+                </div>
+              </div>
+              <div class="mt20">
+                <input type="submit" name="submit" id="submit" value="SIGN IN WITH EMAIL" class="btn btn-default btn-block btn-lg">
+              </div>
+              <div class="strike">
+                <span>Or sign in with</span>
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-xxs-12 mb20">
+                  <a href="https://accounts.google.com/o/oauth2/auth?client_id=322801343830-8tqiip9lfn8po0qi875qsgt20937a8vg.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Fcudl.co.vu%2Fuser%2Fgoogle&amp;scope=email+profile&amp;response_type=code" class="btn btn-danger btn-block btn-lg"><i class="icon-google"></i> GMAIL</a>
+                </div>
+                <div class="col-xs-6 col-xxs-12 mb20">
+                  <a href="https://www.facebook.com/dialog/oauth?client_id=1469046813335757&amp;redirect_uri=http%3A%2F%2Fcudl.co.vu%2Fuser%2Ffacebook&amp;scope=email" class="btn btn-info btn-block btn-lg"><i class="icon-facebook"></i> FACEBOOK</a>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-times"></i></button>
+            <div class="modal-title"><i class="icon-activity-check"></i></div>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm" enctype="application/x-www-form-urlencoded" action="/user/login" method="post">
+              <br/><br/>
+              <div class="tooltip-custom">Now you can sign up through Gmail and Facebook for an even quicker signup!</div>
+              <div class="mb20">
+                <a href="#" class="btn btn-danger btn-block btn-lg"><i class="icon-google"></i> GMAIL</a>
+              </div>
+              <div class="mb20">
+                <a href="#" class="btn btn-info btn-block btn-lg"><i class="icon-facebook"></i> FACEBOOK</a>
+              </div>
+              <div class="strike">
+                <span>Or sign up with</span>
+              </div>
+              <div class="mt20">
+                <a href="signup-page.html" class="btn btn-default btn-block btn-lg"><i class="icon-email"></i>SIGNUP THROUGH EMAIL</a>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <script src="http://code.jquery.com/jquery.js"></script>

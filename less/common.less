@@ -579,26 +579,6 @@ hr {border-top: solid 2px #ddd;}
       color: #4cb7a2;
     }
   }
-  .tooltip-custom {
-    background: #000;
-    color: #fff;
-    font-size: 1.444rem;
-    border-radius: 8px;
-    padding: 20px;
-    position: relative;
-    margin-top: -80px;
-    margin-bottom: 50px;
-    &:after {
-      position: absolute;
-      content: '\E001';
-      left: 50%;
-      bottom: -30px;
-      font-family: 'cuddleup';
-      color: #000;
-      margin-left: -25px;
-      font-size: 50px;
-    }
-  }
   .splash-main {
     padding: 50px 0;
     &.confirm {
@@ -778,23 +758,23 @@ hr {border-top: solid 2px #ddd;}
             }
           }
         }
-        .btn-group {
-          width: 100%;
-          .btn {
-            width: 50%;
-            font-weight: normal;
-            background: #f7f7f7;
-            &.active {
-              color: #4cb7a2;
-              border-color: #4cb7a2;
-              background: #fff;
-              box-shadow: none;
-            }
+      }
+      .btn-group {
+        width: 100%;
+        .btn {
+          width: 50%;
+          font-weight: normal;
+          background: #f7f7f7;
+          &.active {
+            color: #4cb7a2;
+            border-color: #4cb7a2;
+            background: #fff;
+            box-shadow: none;
           }
         }
-        .brn {
-          border-right: 0;
-        }
+      }
+      .brn {
+        border-right: 0;
       }
     }
   }
@@ -1920,6 +1900,28 @@ header {
   }
 }
 
+/* tooltips */
+.tooltip-custom {
+  background: #000;
+  color: #fff;
+  font-size: 1.444rem;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  margin-top: -80px;
+  margin-bottom: 50px;
+  &:after {
+    position: absolute;
+    content: '\E001';
+    left: 50%;
+    bottom: -30px;
+    font-family: 'cuddleup';
+    color: #000;
+    margin-left: -25px;
+    font-size: 50px;
+  }
+}
+
 /* forms */
 input[type=checkbox].css-checkbox, .check-input{ 
   position: absolute; 
@@ -2012,6 +2014,22 @@ input:focus:-ms-input-placeholder {
     text-align: center;
     .modal-header {
       height: 200px;
+      .close {
+        float: left;
+        font-size: 40px;
+      }
+      .modal-title {
+        width: 120px;
+        height: 120px;
+        background: #000;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        font-size: 50px;
+        text-align: center;
+        color: #fff;
+        padding-top: 33px;
+      }
     }
   }
 }
