@@ -19,13 +19,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
   
   //slide menu
-  $('.toggle-nav').click(function () {
-    if ($('#slide-menu').hasClass('show-nav')) {
-      $('#slide-menu').removeClass('show-nav');
-    } else {
-      $('#slide-menu').addClass('show-nav');
-    }
-  });
+  $('nav').slideAndSwipe();
 
 
   //profile:
