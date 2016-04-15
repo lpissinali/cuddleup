@@ -15,17 +15,52 @@
 
   <body>
     <header>
+      <nav>
+        <div class="top">
+          <a href="#" class="ssm-toggle-nav logo"><i class="icon-times"></i> <img src="img/logo.png" alt="cuddle"/></a> 
+        </div>
+        <div>
+          <a class="item" href="#">
+            <i class="icon-activity-check"></i> Verify Account
+          </a>
+          <a class="item" href="#">
+            <i class="icon-check"></i> Complete Profile
+          </a>
+          <a class="item" href="#">
+            <i class="icon-users"></i> My Profile
+          </a>
+          <a class="item" href="#">
+            <i class="icon-heart"></i> Favorites
+          </a>
+          <a class="item" href="#">
+            <i class="icon-time"></i> Booking History
+          </a>
+          <a class="item" href="#">
+            <i class="icon-settings"></i> Settings
+          </a>
+          <a class="item" href="#">
+            <i class="icon-doc"></i> Blog
+          </a>
+          <a class="item" href="#">
+            <i class="icon-info-o"></i> Help
+          </a>
+          <a class="item" href="#">
+            <i class="icon-exit"></i> Log Out
+          </a>
+        </div>
+      </nav>
+
       <div class="container">
         <div class="clearfix">
           <div class="pull-left">
-            <i class="icon-menu visible-sm-inline visible-xs-inline toggle-nav"></i>
-            <a class="pln prn logo" href="/"><img src="img/logo.png" alt="cuddle"/></a>
+            <a href="#" class="ssm-toggle-nav visible-xs-inline logo"><i class="icon-menu"></i> <img src="img/logo.png" alt="cuddle"/></a> 
+            <a class="pln prn logo hidden-xs" href="/"><img src="img/logo.png" alt="cuddle"/></a>
           </div>
           <div class="clearfix menu">
-            <a href="#"><i class="icon-activity-check"></i><span class="hidden-xs hidden-sm">Bookings</span></a>
+            <a href="#" class="hidden-xs"><i class="icon-activity-check"></i><span class="hidden-sm">Bookings</span></a>
             <a href="#"><i class="icon-magnifier"></i><span class="hidden-xs hidden-sm">Browse</span></a>
-            <a href="#"><i class="icon-chat"><span>22</span></i><span class="hidden-xs hidden-sm">Chat</span></a>
-            <div class="dropdown dropdown-filter hidden-sm hidden-xs">
+            <a href="#" class="hidden-xs"><i class="icon-chat"><span>22</span></i><span class="hidden-sm">Chat</span></a>
+            <div class="dropdown dropdown-filter">
               <a href="#"><i class="icon-alert"><span>!</span></i><span class="hidden-xs hidden-sm">Alerts</span></a>
               <div class="dropdown-menu">
                 <div class="top clearfix">
@@ -76,68 +111,74 @@
               </div>
             </div>
             <!--<a href="#"><i class="icon-ellipsis"></i><span class="hidden-xs hidden-sm">More</span></a>-->
-            <div class="dropdown dropdown-filter hidden-sm hidden-xs">
+            <div class="dropdown dropdown-filter hidden-xs">
               <a href="#" class="avatar"><img src="img/avatar.png" alt=""/></a>
               <div class="dropdown-menu">
                 <div class="top clearfix">
                   <div class="pull-left">
-                    Menu
+                    <img src="img/avatar.png" alt=""/> Jenny
                   </div>
                   <a href="#" class="close-btn pull-right"><i class="icon-times"></i></a>
                 </div>
-                <a href="#" class="item">
-                  <i class="icon-user"></i>My Profile
-                </a> 
-                <a href="#" class="item">
-                  <i class="icon-user"></i>Edit Profile
-                </a> 
-                <a href="#" class="item">
-                  <i class="icon-user"></i>Account Settings
-                </a> 
-                <a href="#" class="item">
-                  <i class="icon-user"></i>Get Verified
-                </a> 
-                <a href="#" class="item">
-                  <i class="icon-user"></i>Blog
-                </a> 
+                <div class="clearfix">
+                  <div class="col-xs-6 item2 item2-off active">
+                    <a href="#">
+                      <i class="icon-check-o"></i>Sign Up
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2 item2-off">
+                    <a href="#">
+                      <i class="icon-check-o"></i>Verify Email
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2 item2-off">
+                    <a href="#">
+                      <i class="icon-check-o"></i>Complete Profile
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2 item2-off">
+                    <a href="#">
+                      <i class="icon-check-o"></i>Verify Identity
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2">
+                    <a href="#">
+                      <i class="icon-user"></i>My Profile
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2">
+                    <a href="#">
+                      <i class="icon-heart"></i>Favorites
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2">
+                    <a href="#">
+                      <i class="icon-time"></i>Booking History
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2">
+                    <a href="#">
+                      <i class="icon-settings"></i>Settings
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2">
+                    <a href="#">
+                      <i class="icon-doc"></i>Blog
+                    </a> 
+                  </div>
+                  <div class="col-xs-6 item2">
+                    <a href="#">
+                      <i class="icon-info-o"></i>Help
+                    </a> 
+                  </div>
+                </div>
+                <a href="#" class="bottom">
+                  <i class="icon-exit"></i>Log Out
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="slide-menu">
-        <div class="top">
-          <a class="toggle-nav"><i class="icon-cancel"></i><img src="img/logo.png" alt="cuddle"></a>
-        </div>
-        <ul>
-          <li>
-            <a href="#" class="clearfix">
-              <span class="pull-left">
-                <i class="icon-id"></i>Verify Account
-              </span>
-              <span class="pull-right steps">
-                <span></span><span></span><span></span><span></span>
-              </span>
-            </a>
-          </li>
-          <li><a href="#">
-              <span class="pull-left">
-                <i class="icon-check-o"></i>Complete Profile
-              </span>
-              <span class="pull-right steps">
-                <span class="active"></span><span></span><span></span><span></span>
-              </span>
-            </a>
-          </li>
-          <li><a href="#"><i class="icon-user"></i>My Profile</a></li>
-          <li><a href="#"><i class="icon-heart"></i>Favorites</a></li>
-          <li><a href="#"><i class="icon-time"></i>Booking History</a></li>
-          <li><a href="#"><i class="icon-settings"></i>Settings</a></li>
-          <li><a href="#"><i class="icon-doc"></i>Blog</a></li>
-          <li><a href="#"><i class="icon-info-o"></i>Help</a></li>
-          <li><a href="#"><i class="icon-exit"></i>Log Out</a></li>
-        </ul>
-
       </div>
     </header>
 
@@ -148,27 +189,27 @@
             <ul class="clearfix nav-tabs" role="tablist">
               <li class="col active" role="presentation">
                 <a href="#details" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-info-o"></i>DETAILS
+                  <i class="icon-info-o"></i><br/>DETAILS
                 </a>
               </li>
               <li class="col" role="presentation">
                 <a href="#hosting" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-house"></i>HOSTING
+                  <i class="icon-house"></i><br/>HOSTING
                 </a>
               </li>
               <li class="col" role="presentation">
                 <a href="#pics" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-user"></i>PICS
+                  <i class="icon-user"></i><br/>PICS
                 </a>
               </li>
               <li class="col" role="presentation">
                 <a href="#activities" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-act-13"></i>ACTIVITIES
+                  <i class="icon-act-13"></i><br/>ACTIVITIES
                 </a>
               </li>
               <li class="col" role="presentation">
                 <a href="#preview" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-show"></i>PREVIEW
+                  <i class="icon-show"></i><br/>PREVIEW
                 </a>
               </li>
             </ul>
@@ -202,7 +243,21 @@
               hosting tab
             </div>
             <div role="tabpanel" class="tab-pane" id="pics">
-              pics tab
+              <div class="profile-photos edit-photos">
+                <div class="large" style="background-image:url(img/girl1.jpg)"></div>
+                <div class="thumbs-wrap">
+                  <div class="thumbs clearfix">
+                    <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                    <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                    <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                    <div class="thumb thumb-add" style="background-image: url(img/girl1.jpg)"></div>
+                  </div>
+                  <div class="hidden-lg hidden-md">
+                    <div class="prev hidden"><i class="icon-left"></i></div>
+                    <div class="next"><i class="icon-right"></i></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div role="tabpanel" class="tab-pane profile-activities" id="activities">
               <div class="step-activities">
@@ -381,6 +436,10 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-slider.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery.slideandswipe.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/list.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

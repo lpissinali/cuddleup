@@ -1,0 +1,133 @@
+@media (max-width: 991px) {
+  html {
+    font-size: 17px;
+  }
+
+  .main-container {
+    padding: 0;
+  }
+
+  .col-main-full {
+    border: none;
+    .col-side {
+      display: none;
+    }
+  }
+  .col-main, .col-left {
+    float: none;
+    width: 100%;
+    border: none;
+  }
+
+  .bookings {
+    padding: 15px;
+  }
+
+  .profile-photos {
+    margin-bottom: 80px;
+    height: 400px;
+    .large {
+      display: none;
+    }
+    .thumbs-wrap {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      .prev, .next {
+        position: absolute;
+        top: 50%;
+        color: #fff; 
+        background: #000;
+        z-index: 110;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        margin-top: -40px;
+        cursor: pointer;
+        i {
+          font-size: 30px;
+          position: relative;
+          left: 37px;
+          top: 15px;
+        }
+      }
+      .prev {
+        left: -40px;
+      }
+      .next {
+        right: -40px;
+        i {
+          left: 10px;
+        }
+      }
+    }
+    .thumbs {
+      float: left;
+      width: 20000px;
+      z-index: 100;
+      position: relative;
+      height: 400px;
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      transform: translate(0, 0);
+      .thumb {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 400px;
+        transform: translate(0, 0);
+      }
+    }
+  }
+  .col-main-container {
+    .profile:first-child {
+      position: relative;
+      border-top: solid 1px #ccc;
+      .name:first-child {
+        position: absolute;
+        top: -60px;
+        width: 100%;
+        left: 0;
+      }
+      &:before {
+        content: '\E002';
+        font-family: cuddleup;
+        font-size: 58px;
+        color: #fff;
+        position: absolute;
+        top: -34px;
+        left: 50%;
+        margin-left: -29px;
+        text-shadow: 0 -2px 0 #ccc;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+  .col-xxs-12 {
+    float: none;
+    width: 100%;
+  }
+  .hidden-xxs {
+    display: none;
+  }
+
+  header .logo img {
+    max-width: 120px;
+  }
+  header .menu>a, header .menu .dropdown>a {
+    margin-left: 0;
+  }
+}
