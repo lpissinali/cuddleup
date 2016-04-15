@@ -1,23 +1,23 @@
 $(function () {
   //registration
-  $('.js-confirm').click(function(e) {
+  $('.js-confirm').click(function (e) {
     e.preventDefault();
     $(this).closest('.splash-main').addClass('confirm');
     $(this).closest('.user-type').hide();
     $('.confirmation').removeClass('hidden');
   });
-  
-  $('.js-confirm-cancel').click(function(e) {
+
+  $('.js-confirm-cancel').click(function (e) {
     e.preventDefault();
     $('.confirmation').addClass('hidden');
     $('.splash-main').removeClass('confirm');
     $('.user-type').show();
   });
-  
-  
+
+
   //tooltip initialization
   $('[data-toggle="tooltip"]').tooltip();
-  
+
   //slide menu
   $('nav').slideAndSwipe();
 
@@ -238,7 +238,7 @@ $(function () {
 
 
   //slide menu
-  $('.menu-link').bigSlide();
+//  $('.menu-link').bigSlide();
 
 
   //dropdown filters
@@ -606,7 +606,82 @@ function bindUserMenuEvents() {
   });
 
 
-  //profile slides
+// new profile slides
+  var IMG_WIDTH = 100;
+  var currentImg = 0;
+  var maxImages = $('.thumbs .thumb').length;
+  var speed = 500;
+
+  var imgs = $(".thumbs");
+
+  var swipeOptions = {
+    triggerOnTouchEnd: false,
+    swipeStatus: swipeStatus,
+    allowPageScroll: "vertical",
+    threshold: 50
+  };
+
+  imgs.swipe(swipeOptions);
+
+  $('.profile-photos .prev').click(function () {
+    previousImage();
+  });
+  $('.profile-photos .next').click(function () {
+    nextImage();
+  });
+
+
+  /**
+   * Catch each phase of the swipe.
+   * move : we drag the div
+   * cancel : we animate back to where we were
+   * end : we animate to the next image
+   */
+  function swipeStatus(event, phase, direction, distance) {
+    if (phase == "end") {
+      if (direction == "right") {
+        previousImage();
+      } else if (direction == "left") {
+        nextImage();
+      }
+    }
+  }
+
+  function previousImage() {
+    currentImg = Math.max(currentImg - 1, 0);
+    scrollImages(IMG_WIDTH * currentImg, speed);
+    if (currentImg === 0) {
+      $('.profile-photos .prev').addClass('hidden');
+    }
+    if (currentImg < (maxImages - 1)) {
+      $('.profile-photos .next').removeClass('hidden');
+    }
+  }
+
+  function nextImage() {
+    currentImg = Math.min(currentImg + 1, maxImages - 1);
+    scrollImages(IMG_WIDTH * currentImg, speed);
+    if (currentImg > 0) {
+      $('.profile-photos .prev').removeClass('hidden');
+    }
+    if (currentImg === (maxImages - 1)) {
+      $('.profile-photos .next').addClass('hidden');
+    }
+  }
+
+  /**
+   * Manually update the position of the imgs on drag
+   */
+  function scrollImages(distance, duration) {
+    imgs.css("transition-duration", (duration / 1000).toFixed(1) + "s");
+
+    //inverse the number we set in the css
+    var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
+    imgs.css("transform", "translate(" + value + "vw,0)");
+  }
+
+
+  // old profile slides
   if ($('.swiper-container .swiper-slide').length > 3) {
     var mySwiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
