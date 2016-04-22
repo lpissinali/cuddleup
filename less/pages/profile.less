@@ -121,6 +121,35 @@
     height: 320px;
     background-position: center;
   }
+  .thumbs-wrap {
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      color: #fff; 
+      background: #000;
+      z-index: 110;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      margin-top: -40px;
+      cursor: pointer;
+      i {
+        font-size: 30px;
+        position: relative;
+        left: 37px;
+        top: 15px;
+      }
+    }
+    .prev {
+      left: -40px;
+    }
+    .next {
+      right: -40px;
+      i {
+        left: 10px;
+      }
+    }
+  }
   .thumb {
     width: 100px;
     background-size: cover;
@@ -131,6 +160,67 @@
     margin: 10px 10px 0 0;
     &:nth-child(3n + 3) {
       margin-right: 0;
+    }
+  }
+}
+.edit-photos {
+  .large {
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
+  }
+  .thumbs {
+    margin-bottom: 30px;
+  }
+  .thumb {
+    width: 166px;
+    height: 166px;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    box-sizing: border-box;
+    margin: 30px 0 0 30px;
+    border-radius: 3px;
+    position: relative;
+    i {
+      margin-left: 5px;
+      margin-top: 5px;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: solid 2px #4cb7a2;
+      border-radius: 50%;
+      font-size: 12px;
+      text-align: center;
+      color: #4cb7a2;
+      padding-top: 2px;
+    }
+    .label {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -71px;
+      width: 142px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+    &.thumb-add {
+      border: solid 3px #c7c7c7;
+      display: block;
+      cursor: pointer;
+      &:after {
+        position: absolute;
+        content: 'z';
+        font-family: 'cuddleup';
+        font-size: 44px;
+        left: 50%;
+        margin-left: -22px;
+        top: 50%;
+        margin-top: -22px;
+        line-height: 44px;
+        color: #c7c7c7;
+      }
     }
   }
 }

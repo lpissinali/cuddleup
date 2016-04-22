@@ -188,7 +188,7 @@
         <div class="large" style="background-image:url(img/girl1.jpg)"></div>
         <div class="thumbs-wrap">
           <div class="thumbs clearfix">
-            <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+            <div class="thumb" data-href="{%=file.url%}" data-toggle="modal" data-target="#gallery" style="background-image: url(img/girl1.jpg)"></div>
             <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
             <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
             <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
@@ -378,6 +378,49 @@
         <div>©2014-2016 Cuddleup.com</div>
       </div>
     </footer>
+
+
+    <div class="modal modal-gallery" id="gallery" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="row">
+              <div class="col-xs-3 status">
+                <div class="label label-warning">Pending Approval</div>
+              </div>
+              <div class="col-xs-6 slide-counter">3 OF 3</div>
+              <div class="col-xs-3 text-right">
+                <a href="#" class="btn btn-default btn-sm" data-dismiss="modal">Done</a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body profile-photos">
+            <div class="thumbs-wrap">
+              <div class="thumbs clearfix">
+                <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+              </div>
+              <div class="prev hidden"><i class="icon-left"></i></div>
+              <div class="next"><i class="icon-right"></i></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="clearfix">
+              <a href="#" class="item"><i class="icon-trash"></i></a>
+              <a href="#" class="item"><i class="icon-lock"></i></a>
+              <a href="#" class="item"><i class="icon-refresh"></i></a>
+              <a href="#" class="item pull-right"><i class="icon-icomoon"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

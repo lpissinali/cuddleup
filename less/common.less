@@ -1027,24 +1027,24 @@ table {
   .modal-content {
     box-shadow: none;
     text-align: center;
-    .modal-header {
-      height: 200px;
-      .close {
-        float: left;
-        font-size: 40px;
-      }
-      .modal-title {
-        width: 120px;
-        height: 120px;
-        background: #000;
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto;
-        font-size: 50px;
-        text-align: center;
-        color: #fff;
-        padding-top: 33px;
-      }
+  }
+  .modal-header {
+    height: 200px;
+    .close {
+      float: left;
+      font-size: 40px;
+    }
+    .modal-title {
+      width: 120px;
+      height: 120px;
+      background: #000;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      font-size: 50px;
+      text-align: center;
+      color: #fff;
+      padding-top: 33px;
     }
   }
 }
@@ -1053,5 +1053,73 @@ table {
   .modal-dialog {
     width: 100%;
     margin: auto;
+  }
+}
+
+.modal-gallery {
+  padding: 0!important;
+  .modal-backdrop {
+    background-color: #000;
+  }
+  .modal-dialog {
+    width: 100%;
+    margin: 0;
+    .modal-header {
+      height: 70px;
+      line-height: 40px;
+      background: #1f1f1f;
+    }
+    .modal-body {
+      background: #000;
+      height: auto;
+      margin-bottom: 0;
+      .thumbs-wrap {
+        .prev {
+          i {
+            left: 10px;
+          }
+        }
+        .next {
+          i {
+            left: -10px;
+          }
+        }
+      }
+    }
+    .modal-footer {
+      background: #1f1f1f;
+      .item {
+        float: left;
+        margin-right: 20px;
+        color: #fff;
+      }
+    }
+  }
+  .profile-photos {
+    .thumbs-wrap {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .thumbs {
+      float: left;
+      width: 20000px;
+      z-index: 100;
+      position: relative;
+      height: 400px;
+      transition-property: transform;
+      transition-duration: .5s;
+      transition-timing-function: ease-out;
+      transform: translate(0, 0);
+    }
+    .thumb {
+      padding: 0;
+      margin: 0;
+      width: 100vw;
+      height: 400px;
+      transform: translate(0, 0);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }

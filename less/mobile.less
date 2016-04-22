@@ -5,6 +5,7 @@
 
   .main-container {
     padding: 0;
+    width: 100%;
   }
 
   .col-main-full {
@@ -17,6 +18,10 @@
     float: none;
     width: 100%;
     border: none;
+    border-right: none!important;
+    .col-main-container {
+      border-right: none;
+    }
   }
 
   .bookings {
@@ -49,7 +54,7 @@
           position: relative;
           left: 37px;
           top: 15px;
-        }
+    }
       }
       .prev {
         left: -40px;
@@ -77,6 +82,8 @@
         width: 100vw;
         height: 400px;
         transform: translate(0, 0);
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
   }

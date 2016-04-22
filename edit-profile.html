@@ -182,7 +182,7 @@
       </div>
     </header>
 
-    <div class="container">
+    <div class="container main-container">
       <div class="col-main-full clearfix">
         <div class="col-main">
           <div class="nav-bar nav-bar-tabs">
@@ -243,18 +243,35 @@
               hosting tab
             </div>
             <div role="tabpanel" class="tab-pane" id="pics">
-              <div class="profile-photos edit-photos">
-                <div class="large" style="background-image:url(img/girl1.jpg)"></div>
-                <div class="thumbs-wrap">
-                  <div class="thumbs clearfix">
-                    <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
-                    <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
-                    <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
-                    <div class="thumb thumb-add" style="background-image: url(img/girl1.jpg)"></div>
+              <div class="edit-photos">
+                <div class="large">
+                  <img src="img/girl1.jpg" alt=""/>
+                </div>
+                <div class="thumbs clearfix">
+                  <div class="thumb" style="background-image: url(img/girl1.jpg)">
+                    <div class="label label-warning">Pending Approval</div>
                   </div>
-                  <div class="hidden-lg hidden-md">
-                    <div class="prev hidden"><i class="icon-left"></i></div>
-                    <div class="next"><i class="icon-right"></i></div>
+                  <div class="thumb" style="background-image: url(img/girl1.jpg)">
+                    <div class="label label-danger">Private</div>
+                  </div>
+                  <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                  <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                  <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
+                  <div class="thumb thumb-add"></div>
+                </div>
+                <div class="note">
+                  <div id="pending-box" class="hide">
+                    <div class="mb">Some of your images are pending verification</div>
+                    <div class="small">These images won't be displayed to other users until our team checks them.</div>
+                  </div>
+                  <div id="limit-box" class="hide">
+                    <div class="mb">Maximum Number of Images Reached</div>
+                    <div class="small">If you want to add a new image, delete an old one first.</div>
+                  </div>
+                  <div id="count-box">
+                    <div>You can add <span id="remaining-pictures">12</span> more pictures</div>
+                    <a href="#" class="droparea add-pic"></a>
+                    <div class="small">must be a JPG not exceeding 5 Mb</div>
                   </div>
                 </div>
               </div>
