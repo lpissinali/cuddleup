@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>Cuddle - Edit profile</title>
+    <title>Cuddle - Blog</title>
     <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1">
 
     <!-- main styles -->
@@ -185,212 +185,18 @@
     <div class="container main-container">
       <div class="col-main-full clearfix">
         <div class="col-main">
-          <div class="nav-bar nav-bar-tabs">
-            <ul class="clearfix nav-tabs" role="tablist">
-              <li class="col active" role="presentation">
-                <a href="#details" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-info-o"></i><br/>DETAILS
-                </a>
-              </li>
-              <li class="col" role="presentation">
-                <a href="#hosting" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-house"></i><br/>HOSTING
-                </a>
-              </li>
-              <li class="col" role="presentation">
-                <a href="#pics" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-user"></i><br/>PICS
-                </a>
-              </li>
-              <li class="col" role="presentation">
-                <a href="#activities" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-act-13"></i><br/>ACTIVITIES
-                </a>
-              </li>
-              <li class="col" role="presentation">
-                <a href="#preview" data-toggle="tab" class="item" role="tab">
-                  <i class="icon-show"></i><br/>PREVIEW
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active profile-details" id="details">
-              <form>
-                <div class="form-group">
-                  <label for="city">City</label>
-                  <input type="text" class="form-control" id="city" placeholder="Vancouver, BC">
-                </div>
-                <div class="form-group">
-                  <label for="ethnicity">Ethnicity</label>
-                  <div class="dropdown">
-                    <a data-toggle="dropdown" class="form-control">Black</a>
-                    <ul class="dropdown-menu" id="ethnicity">
-                      <li><a>Asian</a></li>
-                      <li><a>Black</a></li>
-                      <li><a>Indian</a></li>
-                      <li><a>Hispanic</a></li>
-                      <li><a>Middle Eastern</a></li>
-                      <li><a>Mixed Race</a></li>
-                      <li><a>Native American</a></li>
-                      <li><a>White / Caucasian</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </form>
+          <div class="blog">
+            <div class="item">
+              <h2>How to take your first steps as a Companion</h2>
+              <p>This is a shorter post excerpt. It should be around 30 words to keep it simple and more easily digestible. Sell the user on what they’re going to learn and take away from the article.</p>
+              <div><a href="#" class="btn btn-green btn-sm">CONTINUE READING</a></div>
             </div>
-            <div role="tabpanel" class="tab-pane" id="hosting">
-              <div class="hosting">
-                <h2>Are you able to host?</h2>
-                <div class="form-group">
-                  <div class="input-group">
-                    <div data-toggle="buttons" class="btn-group btn-block">
-                      <label class="btn btn-default col-xs-6" input_value="1">Yes
-                        <input type="radio" name="contact_form" checked="checked" value="1">
-                      </label>
-                      <label class="btn btn-default col-xs-6 active" input_value="">No
-                        <input type="radio" name="contact_form" value="">
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="mb30">If you do choose to host later on, you could get more bookings from clients. Your hosting location will only be revealed to clients that you have given permission to. All other clients will only see the general area that you’re hosting in, so they have an idea of where they would be traveling to. </div>
-              
-                <h2>Where do you host?</h2>
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Type in the address of your hosting location"/>
-                </div>
-                <div>Other users will <strong>not</strong> know where you host, only the <a href="#" class="link">general area</a></div>
-                <div class="img"><img src="img/map-placeholder.jpg" alt=""/></div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="pics">
-              <div class="edit-photos">
-                <div class="large">
-                  <img src="img/girl1.jpg" alt=""/>
-                </div>
-                <div class="thumbs clearfix">
-                  <div class="thumb" style="background-image: url(img/girl1.jpg)">
-                    <div class="label label-warning">Pending Approval</div>
-                  </div>
-                  <div class="thumb" style="background-image: url(img/girl1.jpg)">
-                    <div class="label label-danger">Private</div>
-                  </div>
-                  <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
-                  <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
-                  <div class="thumb" style="background-image: url(img/girl1.jpg)"></div>
-                  <div class="thumb thumb-add"></div>
-                </div>
-                <div class="note">
-                  <div id="pending-box" class="hide">
-                    <div class="mb">Some of your images are pending verification</div>
-                    <div class="small">These images won't be displayed to other users until our team checks them.</div>
-                  </div>
-                  <div id="limit-box" class="hide">
-                    <div class="mb">Maximum Number of Images Reached</div>
-                    <div class="small">If you want to add a new image, delete an old one first.</div>
-                  </div>
-                  <div id="count-box">
-                    <div>You can add <span id="remaining-pictures">12</span> more pictures</div>
-                    <a href="#" class="droparea add-pic"></a>
-                    <div class="small">must be a JPG not exceeding 5 Mb</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane profile-activities" id="activities">
-              <div class="step-activities">
-                <div class="options">
-                  <div class="row">
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-all"></i>Select All
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item active">
-                        <i class="icon-act-1"></i>Beach
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-2"></i>Bike Ride
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-3"></i>Coffee
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-4"></i>Cuddling
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-5"></i>Drinks
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-6"></i>Eat Out
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-7"></i>Explore
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-8"></i>Listen
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-9"></i>Mall
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-10"></i>Movies
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-11"></i>Museum
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-12"></i>Outdoor
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-13"></i>Picnic
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-14"></i>Run
-                      </a>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                      <a href="#" class="item">
-                        <i class="icon-act-15"></i>Vacation
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="preview">
-              preview tab
+            <div class="item">
+              <h2>How to take your first steps as a Companion</h2>
+              <p>This is a shorter post excerpt. It should be around 30 words to keep it simple and more easily digestible. Sell the user on what they’re going to learn and take away from the article.</p>
+              <div><a href="#" class="btn btn-green btn-sm">CONTINUE READING</a></div>
             </div>
           </div>
-
         </div>
         <div class="col-side">
           <h3><i class="icon-heart"></i>Favorites</h3>

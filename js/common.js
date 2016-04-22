@@ -609,7 +609,7 @@ function bindUserMenuEvents() {
 // new profile slides
   var IMG_WIDTH = 100;
   var currentImg = 0;
-  var maxImages = $('.thumbs .thumb').length;
+  var maxImages = $('.profile-photos .thumbs .thumb').length;
   var speed = 500;
 
   var imgs = $(".thumbs");
@@ -621,6 +621,16 @@ function bindUserMenuEvents() {
     threshold: 50
   };
 
+  $(window).on("load resize", function () {
+    if ($(window).width() < 975) {
+      imgs.swipe('enable');
+      scrollImages(IMG_WIDTH * currentImg, speed);
+    } else {
+      imgs.swipe('disable');
+      $('.thumbs').css('transform', 'translate(0,0)');
+    }
+  });
+
   imgs.swipe(swipeOptions);
 
   $('.profile-photos .prev').click(function () {
@@ -629,6 +639,7 @@ function bindUserMenuEvents() {
   $('.profile-photos .next').click(function () {
     nextImage();
   });
+
 
 
   /**
