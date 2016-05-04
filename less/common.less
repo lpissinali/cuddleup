@@ -752,6 +752,26 @@ hr {border-top: solid 2px #ddd;}
   }
 }
 
+.nav-full {
+  background: #fff;
+  border-bottom: solid 2px #d9d8d7;
+  .item {
+    text-align: center;
+    a {
+      color: #9c9c9c;
+      font-size: 14px;
+      padding: 20px 0;
+      display: block;
+      font-weight: 600;
+    }
+    &.active {
+      a {
+        color: #1a1a1a;
+      }
+    }
+  }
+}
+
 /* sliders */
 .slider {
   display: inline-block; 
@@ -845,6 +865,30 @@ hr {border-top: solid 2px #ddd;}
     border-color: #36a0dd transparent;
   }
 }
+
+
+/* alerts */
+.alert {
+  background: #292929;
+  border-radius: 6px;
+  padding: 20px 20px 20px 90px;
+  color: #fff;
+  font-size: 1.111rem;
+  font-weight: bold;
+  position: relative;
+  min-height: 85px;
+  text-align: left;
+  margin: 20px 0;
+  i {
+    font-size: 50px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-top: -22px;
+    line-height: normal;
+  }
+}
+
 
 /* forms */
 input[type=checkbox].css-checkbox, .check-input{ 
