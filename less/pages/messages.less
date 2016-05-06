@@ -66,6 +66,48 @@
       }
     }
   }
+  .dropdown {
+    ul {
+      position: absolute;
+      right: 8px;
+      top: 90px;
+      width: 300px;
+      display: none;
+      z-index: 100;
+      background: #fff;
+      border: solid 2px #cfd4d3;
+      border-radius: 0 0 6px 6px;
+      li>a {
+        padding: 10px 15px;
+        border-bottom: solid 1px #f5f5f5;
+        display: block;
+        font-size: 16px;
+        &:hover {
+          background: #fafafa;
+          color: #595958;
+        }
+      }
+      li:last-child>a {
+        border-bottom: none;
+        border-radius: 0 0 6px 6px;
+      }
+    }
+    &:hover {
+      color: green;
+      >a {
+        background: #fff;
+        z-index: 150;
+        position: relative;
+        border-left: solid 2px #cfd4d3;
+        border-right: solid 2px #fff;
+        height: 92px;
+        margin-bottom: -2px;
+      }
+      ul {
+        display: block;
+      }
+    }
+  }
 }
 .nav-bar-tabs {
   border: none;
@@ -194,6 +236,170 @@
   }
 }
 
+.message-list {
+  .item {
+    padding: 20px 30px;
+    border-bottom: solid 1px #e8e8e8;
+    position: relative;
+    .avatar {
+      width: 60px;
+      float: left;
+      position: relative;
+      margin-right: 20px;
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
+    .info {
+      float: left;
+      width: ~"calc(100% - 80px)";
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-top: 8px;
+    }
+    .name {
+      font-weight: bold;
+      color: #595959;
+      span {
+        font-weight: normal;
+        font-size: 14px;
+        color: #b0afae;
+      }
+    }
+  }
+  .message-new {
+    .name, .msg {
+      color: #000;
+    }
+    .info:after {
+      content: '\E004';
+      font-family: 'cuddleup';
+      color: #40a4cd;
+      font-size: 14px;
+      position: absolute;
+      right: 15px;
+      top: 40px;
+    }
+  }
+  .message-reply {
+    .info:after {
+      content: 'Y';
+      font-family: 'cuddleup';
+      color: #b4b4b4;
+      font-size: 20px;
+      position: absolute;
+      right: 15px;
+      top: 40px;
+    }
+  }
+  .delete-open {
+    position: absolute;
+    right: 11px;
+    top: 5px;
+    color: #b4b4b4;
+  }
+}
+
+.chat {
+  .item {
+    margin: 20px 30px;
+    .bubble {
+      float: left;
+      width: ~"calc(100% - 70px)";
+      border-radius: 4px;
+      background: #f2f2f2;
+      padding: 20px;
+      position: relative;
+      font-family: 'ProximaNova-Semibold';
+      color: #6f6f6f;
+      .time {
+        font-size: 14px;
+        margin-top: 5px;
+        color: #b0afae;
+      }
+      &:before {
+        position: absolute;
+        content: '\A';
+        border-style: solid;
+        border-width: 10px 12px;
+        border-color: transparent #f2f2f2 transparent transparent;
+        top: 17px;
+        left: -24px;
+      }
+    }
+    .avatar {
+      float: left;
+      width: 50px;
+      margin-right: 20px;
+      img {
+        border-radius: 6px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .item-my {
+    .avatar {
+      float: right;
+      margin: 0 0 0 20px;
+    }
+    .bubble {
+      background: #3aa7cf;
+      color: #fff;
+      float: right;
+      width: ~"calc(100% - 230px)";
+      .time {
+        color: #fff;
+      }
+      &:before {
+        border-color: transparent transparent transparent #3aa7cf;
+        left: inherit;
+        right: -24px;
+      }
+    }
+  }
+}
+.send-message {
+  .avatar {
+    float: left;
+    width: 50px;
+    margin-right: 20px;
+    img {
+      border-radius: 6px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .input {
+    float: left;
+    width: ~"calc(100% - 70px)";
+    position: relative;
+    &:before, &:after {
+      position: absolute;
+      content: '\A';
+      border-style: solid;
+      border-width: 10px 12px;
+      border-color: transparent #ccc transparent transparent;
+      top: 15px;
+      left: -24px;
+    }
+    &:after {
+      border-color: transparent #fff transparent transparent;
+      left: -23px;
+    }
+    input {
+      text-align: left;
+      background: #fff;
+      margin-bottom: 0;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+}
+
 .note {
   background: #f0f5f4;
   text-align: center;
@@ -214,6 +420,20 @@
   .sub {
     font-size: 15px;
     color: #acb0af;
+  }
+}
+
+.note-yellow {
+  background: #ffe87e;
+  border-bottom: solid 2px #ecd470;
+  padding: 20px;
+  color: #807537;
+  font-size: 16px;
+  h2 {
+    color: #373c40;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
   }
 }
 

@@ -22,6 +22,26 @@ $(function () {
   $('nav').slideAndSwipe();
 
 
+  //messages navigation
+  $('a.show-messages').click(function () {
+    $('body').removeAttr('id');
+    $('#message-list').addClass('hidden');
+    $('#list-messages').removeClass('hidden');
+  });
+  
+   $('.message-expand').unbind('click').click(function (e) {
+    e.preventDefault();
+
+    if ($('#list-messages').hasClass('desktop')) {
+        $('body').attr('id','message-page');
+        $('#message-list').removeClass('hidden');
+        $('#list-messages').addClass('hidden');
+    }
+
+
+});
+
+
   //profile:
   if ($('#select-metric').length > 0) {
     $('#select-metric').click(function (e) {

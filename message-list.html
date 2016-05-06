@@ -144,113 +144,132 @@
     <div class="container">
       <div class="col-main-full clearfix">
         <div class="col-main">
-          <div class="nav-bar">
+          <div class="note-yellow">
             <div class="row">
-              <div class="col-sm-2 prn">
-                <a href="#" class="item btn-back">
-                  <i class="icon-arrow-left"></i>Back
-                </a>
+              <div class="col-xs-8">
+                <h2>Upload a picture to attract more cuddlees!</h2>
+                <div>Increase your odds by adding another picture</div>
               </div>
-              <div class="col-sm-2">
-                <a href="#" class="item item-avatar">
-                  <img src="img/avatar.jpg" alt=""/>
-                </a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#" class="item active">
-                  <i class="icon-activity-check"></i><br/>Offers
-                </a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#" class="item">
-                  <i class="icon-chat"></i><br/>Chat
-                </a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#" class="item">
-                  <i class="icon-user"></i><br/>Profile
-                </a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#" class="item">
-                  <i class="icon-ellipsis"></i><br/>More
-                </a>
+              <div class="col-xs-4 text-right">
+                <a href="#" class="btn btn-alert btn-sm">My Pictures</a>
               </div>
             </div>
           </div>
-          <div class="offer-block">
-            <div class="item">
-              <div class="status">
-                <i class="icon-activity-time"></i>PENDING
+
+          <div class="message-list desktop" id="list-messages">
+            <div class="item clearfix">
+              <div class="avatar"><img src="img/avatar.jpg" alt=""/></div>
+              <div class="info">
+                <div class="name">Alex <span>16 Mins ago</span></div>
+                <a href="#" class="msg message-expand"><i class="icon-activity-add text-info"></i> I sent you a new offer. Go ahead and check it out :)</a>
               </div>
-              <div class="content">
-                <div class="day">Friday, November 13</div>
-                <div>5:30pm  –  8:00pm</div>
-                <div class="options">
-                  <div class="item">
-                    <i class="icon-act-4"></i>Cuddling
-                  </div>
-                  <div class="item">
-                    <i class="icon-act-6"></i>Eat Out
-                  </div>
-                  <div class="item val">
-                    <span>$110</span><br/>Bid
-                  </div>
+              <a href="#" data-toggle="modal" data-target="#deleteMessage" class="delete-open" data-to="3327" data-url="/message/delete?to=3327&amp;max=28240"><i class="icon-times"></i></a>
+            </div>
+            <div class="item message-new clearfix">
+              <div class="avatar"><img src="img/avatar.jpg" alt=""/></div>
+              <div class="info">
+                <div class="name">Alex <span>16 Mins ago</span></div>
+                <a href="#" class="msg message-expand"><i class="icon-activity-warning text-danger"></i> I sent you a new offer. Go ahead and check it out :)</a>
+              </div>
+              <a href="#" data-toggle="modal" data-target="#deleteMessage" class="delete-open" data-to="3327" data-url="/message/delete?to=3327&amp;max=28240"><i class="icon-times"></i></a>
+            </div>
+            <div class="item message-new clearfix">
+              <div class="avatar"><img src="img/avatar.jpg" alt=""/></div>
+              <div class="info">
+                <div class="name">Alex <span>16 Mins ago</span></div>
+                <a href="#" class="msg message-expand"><i class="icon-activity-check text-success"></i> I sent you a new offer. Go ahead and check it out :)</a>
+              </div>
+            </div>
+            <div class="item message-new clearfix">
+              <div class="avatar"><img src="img/avatar.jpg" alt=""/></div>
+              <div class="info">
+                <div class="name">Alex <span>16 Mins ago</span></div>
+                <a href="#" class="msg message-expand"><i class="icon-activity-time text-warning"></i> I sent you a new offer. Go ahead and check it out :)</a>
+              </div>
+              <a href="#" data-toggle="modal" data-target="#deleteMessage" class="delete-open" data-to="3327" data-url="/message/delete?to=3327&amp;max=28240"><i class="icon-times"></i></a>
+            </div>
+            <div class="item message-reply clearfix">
+              <div class="avatar"><img src="img/avatar.jpg" alt=""/></div>
+              <div class="info">
+                <div class="name">Alex <span>16 Mins ago</span></div>
+                <a href="#" class="msg message-expand">I sent you a new offer. Go ahead and check it out :)</a>
+              </div>
+              <a href="#" data-toggle="modal" data-target="#deleteMessage" class="delete-open" data-to="3327" data-url="/message/delete?to=3327&amp;max=28240"><i class="icon-times"></i></a>
+            </div>
+          </div>
+
+          <div class="hidden" id="message-list">
+            <div class="nav-bar">
+              <div class="row">
+                <div class="col-sm-2 prn">
+                  <a href="#" class="item btn-back show-messages">
+                    <i class="icon-arrow-left"></i><br/>Back
+                  </a>
                 </div>
-                <p>The estimated cost of this date is between <strong>$100 - $135</strong> based on the length of date and activities selected.  </p>
-                <div class="row actions">
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-success btn-block"><i class="icon-check mr"></i>Accept</a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-danger btn-block"><i class="icon-times mr"></i>Decline</a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-default btn-block"><i class="icon-calendar mr"></i>Edit Date & Time</a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-default btn-block"><i class="icon-money mr"></i>Edit Bid</a>
+                <div class="col-sm-2">
+                  <a href="#" class="item item-avatar">
+                    <img src="img/avatar.jpg" alt=""/>
+                  </a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#" class="item">
+                    <i class="icon-activity-check"></i><br/>Offers
+                  </a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#" class="item active">
+                    <i class="icon-chat"></i><br/>Chat
+                  </a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#" class="item">
+                    <i class="icon-user"></i><br/>Profile
+                  </a>
+                </div>
+                <div class="col-sm-2 dropdown">
+                  <a href="#" class="item">
+                    <i class="icon-ellipsis"></i><br/>More
+                  </a>
+                  <ul>
+                    <li><a href="#" class="share-photos" user="" action="share">Share my Private Pics</a></li>
+                    <li><a href="#" class="user-block" user="" action="block">Block User</a></li>
+                    <li><a href="#">Request his Private Pics</a></li>
+                    <li><a href="#" class="report-btn" user="">Report</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="chat">
+              <div class="item clearfix">
+                <div class="avatar"><img src="img/avatar.jpg" alt=""/></div>
+                <div class="bubble">
+                  <div>Sounds great. Yes, I love sushi!</div>
+                  <div class="time"><i class="icon-check"></i> Read 3 hours ago</div>
+                </div>
+              </div>
+              <div class="item item-my clearfix">
+                <div class="avatar"><img src="img/avatar.jpg" alt=""/></div>
+                <div class="bubble">
+                  <div>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book.</div>
+                  <div class="time"><i class="icon-dot"></i> Sent 3 hours ago</div>
+                </div>
+              </div>
+
+              <div class="tab-footer">
+                <div class="send-message clearfix">
+                  <div class="avatar"><img src="img/avatar.jpg" alt=""/></div>
+                  <div class="input">
+                    <input type="text" class="form-control" placeholder="Type in your message"/>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
-              <div class="status">
-                <i class="icon-activity-time"></i>PENDING
-              </div>
-              <div class="content">
-                <div class="day">Friday, November 13</div>
-                <div>5:30pm  –  8:00pm</div>
-                <div class="options">
-                  <div class="item">
-                    <i class="icon-act-4"></i>Cuddling
-                  </div>
-                  <div class="item">
-                    <i class="icon-act-6"></i>Eat Out
-                  </div>
-                  <div class="item val">
-                    <span>$110</span><br/>Bid
-                  </div>
-                </div>
-                <p>The estimated cost of this date is between <strong>$100 - $135</strong> based on the length of date and activities selected.  </p>
-                <div class="row actions">
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-success btn-block"><i class="icon-check mr"></i>Accept</a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-danger btn-block"><i class="icon-times mr"></i>Decline</a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-default btn-block"><i class="icon-calendar mr"></i>Edit Date & Time</a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#" class="btn btn-default btn-block"><i class="icon-money mr"></i>Edit Bid</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
           </div>
         </div>
+
+
         <div class="col-side">
           <h3><i class="icon-heart"></i>Favorites</h3>
           <a href="#" class="item clearfix">
@@ -330,6 +349,26 @@
         <div>©2014-2016 Cuddleup.com</div>
       </div>
     </footer>
+
+
+
+    <div class="modal" id="deleteMessage" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h2>Are you sure want to delete this chat? This action cannot be undone.</h2><br/>
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="#" data-dismiss="modal" class="btn btn-danger btn-block delete-sure">Delete</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" data-dismiss="modal" class="btn btn-default btn-block">Close</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
