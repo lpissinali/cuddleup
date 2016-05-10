@@ -14,6 +14,22 @@ $(function () {
     $('.user-type').show();
   });
 
+  //datetimepicker
+  $('#calendar').datetimepicker({
+    inline: true,
+    collapse: false,
+    minDate: new Date(),
+    icons: {
+      previous: 'icon-left',
+      next: 'icon-right',
+      up: 'icon-plus',
+      down: 'icon-minus',
+      time: 'icon-activity-time',
+      date: 'icon-calendar'
+    }
+  });
+
+
 
   //tooltip initialization
   $('[data-toggle="tooltip"]').tooltip();
@@ -28,18 +44,18 @@ $(function () {
     $('#message-list').addClass('hidden');
     $('#list-messages').removeClass('hidden');
   });
-  
-   $('.message-expand').unbind('click').click(function (e) {
+
+  $('.message-expand').unbind('click').click(function (e) {
     e.preventDefault();
 
     if ($('#list-messages').hasClass('desktop')) {
-        $('body').attr('id','message-page');
-        $('#message-list').removeClass('hidden');
-        $('#list-messages').addClass('hidden');
+      $('body').attr('id', 'message-page');
+      $('#message-list').removeClass('hidden');
+      $('#list-messages').addClass('hidden');
     }
 
 
-});
+  });
 
 
   //profile:

@@ -89,3 +89,130 @@
     }
   }
 }
+
+.calendar {
+  .disabled {
+    color: #e0e0e0!important;
+  }
+  .datepicker {
+    tr:first-child {
+      th {
+        background: #f0f5f4;
+        padding: 20px 0;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        border-bottom: solid 2px #ccc;
+      }
+    }
+    .picker-switch {
+      cursor: default;
+      &:hover {
+        background: #f0f5f4;
+      }
+    }
+    .dow {
+      text-transform: uppercase;
+      padding: 20px 0;
+    }
+    .day {
+      padding: 20px 0;
+      font-size: 1.111rem;
+      border: solid 2px #e6e6e6;
+    }
+    .day.new, .day.old {
+      color: #dadada;
+    }
+    .day.today {
+      color: #4cb7a2;
+      width: auto;
+      &:before {
+        border: solid 2px #4cb7a2;
+        border-radius: 50%;
+        width: 80%;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        left: 50%;
+        margin-left: -40%;
+      }
+    }
+  }
+
+  .timepicker {
+    margin: 30px;
+    .timepicker-picker {
+      tr:first-child, tr:nth-child(3) {
+        a {
+          border: solid 2px #c9c9c9;
+          border-bottom: none;
+          border-radius: 6px 6px 0 0;
+          width: 100%;
+          display: block;
+          background: #f0f5f4;
+          color: #989c9b;
+          span:hover {
+            background: inherit;
+          }
+        }
+      }
+      tr:nth-child(2) {
+        .timepicker-hour, .timepicker-minute {
+          border: solid 2px #c9c9c9;
+          border-right: none;
+          color: #4cb7a2;
+          display: block;
+          width: 100%;
+          height: 62px;
+        }
+        .timepicker-minute {
+          border-left: none;
+        }
+        .separator {
+          border-top: solid 2px #c9c9c9;
+          border-bottom: solid 2px #c9c9c9;
+        }
+        button {
+          width: 100%;
+          background: #fff;
+          border-radius: 0;
+          border-left: none;
+          border-color: #c9c9c9;
+          color: #4cb7a2!important;
+          &:active {
+            box-shadow: none;
+          }
+          &:hover {
+            background: #eee;
+          }
+        }
+      }
+      tr:nth-child(3) {
+        a {
+          border-top: none;
+          border-bottom: solid 2px #c9c9c9;
+          border-radius: 0 0 6px 6px;
+        }
+      }
+      td.separator {
+        width: 10px;
+      }
+    }
+  }
+  .timepicker-minutes, .timepicker-hours {
+    td {
+      border: solid 2px #c9c9c9;
+    }
+  }
+  li.picker-switch {
+    display: none;
+  }
+}
+.duration {
+  margin: 30px;
+  .form-control {
+    background: #f0f5f4;
+  }
+}
+
