@@ -55,6 +55,20 @@
         font-size: 30px;
       }
     }
+    span {float: right;}
+    input {
+      position:absolute;
+      filter:alpha(opacity=0);
+      -moz-opacity:0;
+      opacity:0;
+    }
+    span:hover ~ span label,
+      span:hover label,
+      span.checked label,
+      span.checked ~ span label {
+      color:#4cb7a2;
+      cursor: pointer;
+    }
   }
   .rating-sm {
     color: #666;

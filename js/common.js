@@ -14,25 +14,48 @@ $(function () {
     $('.user-type').show();
   });
 
-  //datetimepicker
-  $('#calendar').datetimepicker({
-    inline: true,
-    collapse: false,
-    minDate: new Date(),
-    icons: {
-      previous: 'icon-left',
-      next: 'icon-right',
-      up: 'icon-plus',
-      down: 'icon-minus',
-      time: 'icon-activity-time',
-      date: 'icon-calendar'
-    }
+
+  //stars rating
+  $(".rating input:radio").attr("checked", false);
+  $('.rating input').click(function () {
+    $(".rating span").removeClass('checked');
+    $(this).parent().addClass('checked');
   });
+
+//  $('input:radio').change(
+//          function () {
+//            var userRating = this.value;
+//            alert(userRating);
+//          });
+
+  //datetimepicker
+  if ($('#calendar').lenght > 0) {
+    $('#calendar').datetimepicker({
+      inline: true,
+      collapse: false,
+      minDate: new Date(),
+      icons: {
+        previous: 'icon-left',
+        next: 'icon-right',
+        up: 'icon-plus',
+        down: 'icon-minus',
+        time: 'icon-activity-time',
+        date: 'icon-calendar'
+      }
+    });
+  }
 
 
 
   //tooltip initialization
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip({
+    html: true
+  });
+
+  //popover initialization
+  $('[data-toggle="popover"]').popover({
+    html: true
+  });
 
   //slide menu
   $('nav').slideAndSwipe();
@@ -566,7 +589,7 @@ function bindListEvents() { //TODO: optimize
 }
 
 function bindReviewEvent(to) {
-  $('.review-star').unbind('click').click(function (e) {
+  $('.icon-star').unbind('click').click(function (e) {
     $.ajax({
       type: 'GET',
       url: '/review/add',
