@@ -1,4 +1,17 @@
 $(function () {
+    //add/subtract from bid price
+    $('#add-bid').on('click', function(e){
+      e.preventDefault();
+      $('#counter').text(parseInt($('#counter').text(), 10) + 1);
+    });
+    $('#subtract-bid').on('click', function(e){
+      e.preventDefault();
+      if ($('#counter').text() > 0) {
+        $('#counter').text(parseInt($('#counter').text(), 10) - 1);
+      }
+    });
+  
+  
   //registration
   $('.js-confirm').click(function (e) {
     e.preventDefault();
@@ -29,7 +42,7 @@ $(function () {
 //          });
 
   //datetimepicker
-  if ($('#calendar').lenght > 0) {
+  if ($('#calendar')[0]) {
     $('#calendar').datetimepicker({
       inline: true,
       collapse: false,

@@ -141,22 +141,219 @@
     <div class="container main-container">
       <div class="col-main-full clearfix">
         <div class="col-main">
-          <div class="calendar" id="calendar"></div>
-          <div class="duration">
-            <select class="form-control">
-              <option>1 Hour</option>
-              <option>2 Hours</option>
-              <option>3 Hours</option>
-              <option>4 Hours</option>
-            </select>
-          </div>
-          <div class="tab-footer">
-            <div class="row">
-              <div class="col-xs-6">
-                <a href="#" class="btn btn-default btn-block">CANCEL</a>
+          <div class="tab-content booking-steps">
+            <div class="tab-pane active" id="booking-step1">
+              <div class="calendar" id="calendar"></div>
+              <div class="duration">
+                <h3>Duration</h3>
+                <div data-toggle="buttons" class="btn-group btn-block">
+                  <label class="btn btn-default col-sm-3 col-xs-6 active" input_value="">
+                    1 Hour<span>~$50</span>
+                    <input type="radio">
+                  </label>
+                  <label class="btn btn-default col-sm-3 col-xs-6" input_value="1">
+                    2 Hours<span>~$100</span>
+                    <input type="radio">
+                  </label>
+                  <label class="btn btn-default col-sm-3 col-xs-6" input_value="2">
+                    3 Hours<span>~$150</span>
+                    <input type="radio">
+                  </label>
+                  <label class="btn btn-default col-sm-3 col-xs-6" input_value="3">
+                    4 Hours<span>~$200</span>
+                    <input type="radio">
+                  </label>
+                </div>
               </div>
-              <div class="col-xs-6">
-                <a href="#" class="btn btn-success btn-block">CONFIRM</a>
+              <div class="tab-footer">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="#" class="btn btn-default btn-block">CANCEL</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a href="#booking-step2" role="tab" data-toggle="tab" class="btn btn-success btn-block">NEXT</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="booking-step2">
+              <div class="note note2">
+                <a href="#booking-step1" role="tab" data-toggle="tab"><i class="icon-arrow-left"></i> </a><span>SELECT UP TO 3 ACTIVITIES</span>
+              </div>
+              <div class="step-activities">
+                <div class="options">
+                  <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item active" data-activity="1">
+                        <i class="icon-act-1"></i>Beach</a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="2">
+                        <i class="icon-act-2"></i>Beer                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="3">
+                        <i class="icon-act-3"></i>Bike                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="4">
+                        <i class="icon-act-4"></i>Coffee                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="5">
+                        <i class="icon-act-5"></i>Cuddling                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="6">
+                        <i class="icon-act-6"></i>Drinks                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="7">
+                        <i class="icon-act-7"></i>Eat Out                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="8">
+                        <i class="icon-act-8"></i>Exercise                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="9">
+                        <i class="icon-act-9"></i>Explore                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="10">
+                        <i class="icon-act-10"></i>Listen                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="11">
+                        <i class="icon-act-11"></i>Massage                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="12">
+                        <i class="icon-act-12"></i>Movies                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="13">
+                        <i class="icon-act-13"></i>Museum                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="14">
+                        <i class="icon-act-14"></i>Outdoor                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="15">
+                        <i class="icon-act-15"></i>Picnic                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="16">
+                        <i class="icon-act-16"></i>Running                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="17">
+                        <i class="icon-act-17"></i>Shopping                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="18">
+                        <i class="icon-act-18"></i>Theater                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="19">
+                        <i class="icon-act-19"></i>Vacation                  </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                      <a href="#" class="profile-activity item" data-activity="20">
+                        <i class="icon-act-20"></i>Walking                  </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-footer">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="#" class="btn btn-default btn-block">CANCEL</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a href="#booking-step3" role="tab" data-toggle="tab" class="btn btn-success btn-block">NEXT</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane price-picker" id="booking-step3">
+              <div class="row">
+                <div class="col-sm-6 date">
+                  <a href="#booking-step1" role="tab" data-toggle="tab" class="item">
+                    <div class="title">DATE</div>
+                    <div class="info">Friday, November 13</div>
+                  </a>
+                </div>
+                <div class="col-sm-6 time">
+                  <a href="#booking-step1" role="tab" data-toggle="tab" class="item">
+                    <div class="title">TIME</div>
+                    <div class="info">7pm - 10pm (3hrs)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="title">ACTIVITIES
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-sm-4 col-xs-6"><i class="icon-act-5"></i> Cuddling</div>
+                      <div class="col-sm-4 col-xs-6"><i class="icon-act-7"></i> Eat Out</div>
+                      <div class="col-sm-4 col-xs-6"><i class="icon-act-20"></i> Walking</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item item-gray">
+                <div class="title">ESTIMATED COST
+                  <div>
+                    <small>An estimation based on the companion's hourly rate of <strong>$30 - $50</strong>and the length of the date.</small>
+                  </div>
+                  <div class="price">
+                    $90 - $150
+                  </div>
+                </div>
+              </div>
+              <div class="item item-gray">
+                <div class="title">NAME YOUR PRICE
+                  <div>
+                    <small>Be aware that your bid is not the final price. The companion may counter your bid with a higher price.</small>
+                  </div>
+                  <div class="calculator">
+                    <div><a href="#" id="subtract-bid"><i class="icon-minus"></i></a></div>
+                    <div>$<span id="counter">110</span></div>
+                    <div><a href="#" id="add-bid"><i class="icon-plus"></i></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-footer">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="#" class="btn btn-default btn-block">CANCEL</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a href="#booking-step4" role="tab" data-toggle="tab" class="btn btn-success btn-block">NEXT</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="booking-step4">
+              <div class="note note2">
+                <a href="#booking-step3" role="tab" data-toggle="tab"><i class="icon-arrow-left"></i> </a><span>SEND A MESSAGE TO SARAH</span>
+              </div>
+              <div class="message-step">
+                <p>Please keep your message civil. A good message is short with a professional tone. Try describing the activities you would like to do, and for how long.</p>
+                <textarea class="form-control" rows="5"></textarea>
+                <div class="char-left">475 characters left</div>
+              </div>
+              <div class="tab-footer">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="#" class="btn btn-default btn-block">CANCEL</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a href="#" class="btn btn-success btn-block">CONFIRM</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -244,8 +441,12 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-slider.js"></script>
+    <script src="js/libs/bootstrap/popover.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery.slideandswipe.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
     <script src="js/common.js"></script>
+
   </body>
 </html>
