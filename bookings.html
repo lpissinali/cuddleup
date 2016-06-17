@@ -163,7 +163,7 @@
           </div>
           <div class="tab-content bookings">
             <div role="tabpanel" class="tab-pane active" id="confirmed">
-              <a href="#" class="item item-success clearfix">
+              <a href="#booking-details" data-toggle="modal" class="item item-success clearfix">
                 <div class="date">
                   <i class="icon-check"></i>NOV<br/><span class="day">30</span>
                 </div>
@@ -372,6 +372,42 @@
         <div>©2014-2016 Cuddleup.com</div>
       </div>
     </footer>
+
+    <div class="modal fade" id="booking-details" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="offer-block">
+              <div class="item">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="status status-success">
+                  <i class="icon-activity-time"></i>PENDING
+                </div>
+                <div class="content">
+                  <div class="day">Friday, November 13</div>
+                  <div>5:30pm  –  8:00pm</div>
+                  <div class="options">
+                    <div class="item">
+                      <i class="icon-act-4"></i>Cuddling
+                    </div>
+                    <div class="item">
+                      <i class="icon-act-6"></i>Eat Out
+                    </div>
+                    <div class="item val">
+                      <span>$110</span><br>Bid
+                    </div>
+                  </div>
+                  <p>The estimated cost of this date is between <strong>$100 - $135</strong> based on the length of date and activities selected.  </p>
+                  <div class="actions">
+                    <a href="#" class="btn btn-default btn-block"><i class="icon-times mr"></i>Cancel</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

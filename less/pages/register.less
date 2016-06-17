@@ -99,3 +99,60 @@
   z-index: 10;
   color: #a0a0a0;
 }
+
+.verify {
+  .item {
+    padding: 30px 20px;
+    border-bottom: solid 2px #f4f4f4;
+    line-height: 38px;
+    background: #fff;
+    font-weight: bold;
+    .icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: solid 3px #ddd;
+      display: inline-block;
+      position: relative;
+      top: 9px;
+      margin-right: 10px;
+    }
+    &.verified {
+      color: #4bb49f;
+      .icon {
+        border: none;
+
+        &:after {
+          position: absolute;
+          font-family: 'cuddleup';
+          content: 'S';
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+.passport {
+  color: #33657d;
+}
+.license {
+  color: #DB8B1A;
+}
+.passport, .license {
+  text-align: left;
+  i {
+    font-size: 75px;
+    margin-right: 15px;
+    position: relative;
+    top: -20px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+  }
+  small {
+    font-size: 13px;
+    color: #bbb;
+  }
+}

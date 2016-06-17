@@ -168,6 +168,10 @@
     border-radius: 4px;
     text-align: center;
     margin-bottom: 30px;
+    .close {
+      margin-right: 8px;
+      margin-top: 5px;
+    }
     .status {
       border-bottom: solid 2px #cfd4d3;
       background: #f5faf9;
@@ -188,6 +192,12 @@
         font-size: 20px;
         &:before {
           top: -4px;
+        }
+      }
+      &.status-success {
+        color: #4cb7a2; 
+        i {
+          background: #4cb7a2;
         }
       }
     }

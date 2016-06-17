@@ -702,7 +702,6 @@ hr {border-top: solid 2px #ddd;}
   border: solid 2px #cfd4d3;
   border-top: none;
   border-radius: 0 0 6px 6px;
-  margin-bottom: 30px;
   .col-main {
     background: #fff;
     border-bottom-left-radius: 6px;
@@ -791,14 +790,13 @@ hr {border-top: solid 2px #ddd;}
   .slider-handle {
     position: absolute;
     width: 30px;
-    height: 14px; 
+    height: 20px; 
     border-radius: 4px; 
     border: none;  
     background: #fff;
     text-align: center; 
     &.triangle { 
-      margin-left: -33px;
-      top: 3px;
+      margin-left: -16px;
     }
   }
   .slider-track { 
@@ -821,6 +819,17 @@ hr {border-top: solid 2px #ddd;}
   }
   input, .tooltip.hide {
     display: none;
+  }
+}
+.slide-range {
+  .form-control {
+    height: inherit;
+    margin-bottom: 0;
+  }
+  .slider-handle {
+    &.round { 
+      margin-left: -16px;
+    }
   }
 }
 
@@ -1132,6 +1141,13 @@ ul.simple {
   }
 }
 
+/* errors */
+.errors {
+  li {
+    color: #ec6666;
+  }
+}
+
 
 /* modals */
 .modal-dialog {
@@ -1141,7 +1157,6 @@ ul.simple {
     text-align: center;
   }
   .modal-header {
-    height: 200px;
     .close {
       float: left;
       font-size: 40px;
@@ -1171,6 +1186,13 @@ ul.simple {
     width: 100%;
     margin: auto;
   }
+}
+
+.modal-footer {
+  padding: 20px;
+  background: #e4e8e7;
+  border-top: solid 2px #d2d6d5;
+  margin-top: 30px;
 }
 
 .modal-gallery {
